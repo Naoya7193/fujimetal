@@ -1,4 +1,4 @@
-<?php get_header(); ?>
+<?php include 'inc/header.php'; ?>
 
 <!-- トピック -->
 <div class="topic">
@@ -17,7 +17,7 @@
 
 <!-- 会社概要 -->
 <div class="introduce">
-    <img src="<?= get_template_directory_uri(); ?>/image/building.jpg" alt="会社の画像" class="intorduce_image">
+    <img src="./image/building.jpg" alt="会社の画像" class="intorduce_image">
     <div class="introduce_text_area">
         <p class="introduce_title">お客様と一緒に60年</p>
         <p class="introduce_text">私達についての文章私達についての文章私達についての文章私達についての文章私達についての文章私達についての文章私達についての文章私達についての文章私達についての文章私達についての文章私達についての文章私達についての文章</p>
@@ -40,9 +40,9 @@
             </p>
         </div>
         <div class="casestady_image_box">
-            <img src="<?= get_template_directory_uri(); ?>/image/welder.jpg" alt="溶接の画像" class="casestady_image welder">
-            <img src="<?= get_template_directory_uri(); ?>/image/processing.jpg" alt="加工の画像" class="casestady_image processing">
-            <img src="<?= get_template_directory_uri(); ?>/image/gear.jpg" alt="ギアの画像" class="casestady_image gear">
+            <img src="./image/welder.jpg" alt="溶接の画像" class="casestady_image welder">
+            <img src="./image/processing.jpg" alt="加工の画像" class="casestady_image processing">
+            <img src="./image/gear.jpg" alt="ギアの画像" class="casestady_image gear">
         </div>
     </div>
 </div>
@@ -88,10 +88,10 @@
         </div>
     </div>
     <div class="recruit_image_area">
-        <img src="<?= get_template_directory_uri(); ?>/image/recruit01.png" alt="従業員の画像" class="recruit_image">
-        <img src="<?= get_template_directory_uri(); ?>/image/recruit02.png" alt="従業員の画像" class="recruit_image">
+        <img src="./image/recruit01.png" alt="従業員の画像" class="recruit_image">
+        <img src="./image/recruit02.png" alt="従業員の画像" class="recruit_image">
     </div>
 </div>
 
 
-<?php get_footer(); ?>
+<?php include 'inc/footer.php'; ?>

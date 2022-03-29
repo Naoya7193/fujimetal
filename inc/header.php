@@ -38,8 +38,6 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/destyle.css@2.0.2/destyle.css">
-
-    <?php wp_head(); ?>
 </head>
 
 <body>
