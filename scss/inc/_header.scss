@@ -1,0 +1,101 @@
+// ヘッダー
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+
+    &_icon{
+        width: 21%;
+        padding: 35px 0;
+        font-size: 24px;
+        font-weight: 700;
+        margin-left: 5%;
+
+        &:hover{
+            transition: .3s all;
+            opacity: .8;
+        }
+    }
+
+    &_nav{
+        width: auto;
+    }
+
+    &_list{
+        display: flex;
+
+        a{
+            display: block;
+            text-align: center;
+            padding: 40px 25px;
+            font-weight: 500;
+
+            &:hover{
+                transition: .3s all;
+                opacity: .7;
+            }
+        }
+    }
+
+    &_contact a{
+        padding: 40px 50px;
+        color: #fff;
+        background-color: #34375A;
+        margin-left: 25px;
+    }
+}
+
+// MV
+.mv{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    background-image: url(../image/mv.jpg);
+    width: 100%;
+    aspect-ratio: 1440/776;
+    max-height: 776px;
+    margin: 0 auto;
+    // height: 500px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top left;
+
+    &_inner{
+        height: auto;
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        height: 100%;
+        // padding-bottom: 54px;
+    }
+
+    .maincopy{
+        font-size: 48px;
+        line-height: 1.67;
+        font-family :YuMincho,'Yu Mincho',serif;
+        margin-bottom: 54px;
+    }
+
+    .button{
+        margin-bottom: 54px;
+        width: fit-content;
+
+        &_round{
+            border-color: #fff;
+
+            &::before{
+                background-color: #fff;
+            }
+
+            &::after{
+                border-color: #fff;
+            }
+        }
+
+        &_text{
+            color: #fff;
+        }
+    }
+}

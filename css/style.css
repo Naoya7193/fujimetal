@@ -1,0 +1,711 @@
+@charset "UTF-8";
+/* 共通パーツ */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #222;
+}
+
+.wrapper {
+  width: 90%;
+  margin: 0 auto;
+  max-width: 1290px;
+}
+
+.wrapper_small {
+  width: 81%;
+  margin: 0 auto;
+  max-width: 1170px;
+}
+
+.button_inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.button_inner:hover {
+  -webkit-transition: 0.3s all;
+  transition: 0.3s all;
+  opacity: 0.7;
+}
+.button_round {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 53px;
+  height: 53px;
+  border: 1px solid #263A67;
+  border-radius: 100px;
+  position: relative;
+}
+.button_round::before {
+  position: absolute;
+  content: "";
+  width: 36%;
+  height: 1px;
+  background-color: #263A67;
+}
+.button_round::after {
+  position: absolute;
+  content: "";
+  border: 1px solid #263A67;
+  border-top: 0;
+  border-left: 0;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  width: 6px;
+  height: 6px;
+  right: 32%;
+}
+.button_text {
+  color: #263A67;
+  font-family: "Meiryo", "Yu Gothic", sans-serif;
+  font-weight: 600;
+  margin-left: 25px;
+}
+
+.section_title {
+  font-family: YuMincho, "Yu Mincho", serif;
+  font-size: 28px;
+  margin-bottom: 35px;
+  padding-left: 15px;
+  position: relative;
+}
+.section_title::before {
+  position: absolute;
+  content: "";
+  border-left: 6px solid #34375A;
+  width: 6px;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+}
+.header_icon {
+  width: 21%;
+  padding: 35px 0;
+  font-size: 24px;
+  font-weight: 700;
+  margin-left: 5%;
+}
+.header_icon:hover {
+  -webkit-transition: 0.3s all;
+  transition: 0.3s all;
+  opacity: 0.8;
+}
+.header_nav {
+  width: auto;
+}
+.header_list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.header_list a {
+  display: block;
+  text-align: center;
+  padding: 40px 25px;
+  font-weight: 500;
+}
+.header_list a:hover {
+  -webkit-transition: 0.3s all;
+  transition: 0.3s all;
+  opacity: 0.7;
+}
+.header_contact a {
+  padding: 40px 50px;
+  color: #fff;
+  background-color: #34375A;
+  margin-left: 25px;
+}
+
+.mv {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  background-image: url(../image/mv.jpg);
+  width: 100%;
+  aspect-ratio: 1440/776;
+  max-height: 776px;
+  margin: 0 auto;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top left;
+}
+.mv_inner {
+  height: auto;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  height: 100%;
+}
+.mv .maincopy {
+  font-size: 48px;
+  line-height: 1.67;
+  font-family: YuMincho, "Yu Mincho", serif;
+  margin-bottom: 54px;
+}
+.mv .button {
+  margin-bottom: 54px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.mv .button_round {
+  border-color: #fff;
+}
+.mv .button_round::before {
+  background-color: #fff;
+}
+.mv .button_round::after {
+  border-color: #fff;
+}
+.mv .button_text {
+  color: #fff;
+}
+
+.contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #EBEBEB;
+  margin-bottom: 190px;
+}
+.contact_title {
+  font-family: YuMincho, "Yu Mincho", serif;
+  font-size: 28px;
+  margin-top: 95px;
+  margin-bottom: 55px;
+}
+.contact_tel_button {
+  width: 70%;
+  text-align: center;
+  color: #5D5B88;
+  font-family: "din-2014", sans-serif;
+  font-size: 30px;
+  font-weight: 500;
+  padding: 40px 0;
+  border: 1px solid #5D5B88;
+  margin-bottom: 28px;
+}
+.contact_tel_button .tel_number {
+  display: inline-block;
+  position: relative;
+}
+.contact_tel_button .tel_number::before {
+  position: absolute;
+  content: "";
+  width: 34px;
+  height: 34px;
+  left: -5.5vw;
+  background-image: url(../image/tel.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+.contact_tel_button .tel_number::after {
+  position: absolute;
+  content: "(平日10:00〜18:00)";
+  font-family: "Noto Sans JP", sans-serif;
+  -webkit-transform: translateY(50%);
+          transform: translateY(50%);
+  font-size: 16px;
+  font-weight: 400;
+  color: #5D5B88;
+  right: -100%;
+}
+.contact_button {
+  display: block;
+  width: 70%;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 500;
+  color: #fff;
+  padding: 40px 0;
+  background-color: #5D5B88;
+  margin-bottom: 96px;
+  position: relative;
+}
+.contact_button::before {
+  position: absolute;
+  content: "";
+  background-image: url(../image/mail.png);
+  width: 30px;
+  height: 30px;
+  left: 50%;
+  -webkit-transform: translateX(-150px);
+          transform: translateX(-150px);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+.contact_button:hover {
+  -webkit-transition: 0.3s all;
+  transition: 0.3s all;
+  opacity: 0.8;
+}
+
+.footer {
+  color: #fff;
+  background-color: #34375A;
+  padding-top: 48px;
+}
+.footer a:hover {
+  -webkit-transition: 0.3s all;
+  transition: 0.3s all;
+  opacity: 0.8;
+}
+.footer_icon {
+  font-size: 28px;
+  font-weight: 700;
+}
+.footer_inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 38px;
+}
+.footer_info {
+  font-size: 15px;
+}
+.footer_info .address {
+  margin-bottom: 1em;
+}
+.footer_nav {
+  font-weight: 500;
+  padding-bottom: 70px;
+  font-size: 18px;
+}
+.footer_nav li {
+  margin-bottom: 25px;
+}
+.footer_nav li ul {
+  margin-top: 25px;
+}
+.footer_nav li ul li a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: 400;
+  font-size: 16px;
+  margin-left: 20px;
+  position: relative;
+}
+.footer_nav li ul li a::before {
+  position: absolute;
+  content: "";
+  width: 8px;
+  height: 8px;
+  border: 1px solid #fff;
+  border-top: 0;
+  border-left: 0;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  left: -20px;
+}
+.footer_nav_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.footer_nav_block {
+  margin-left: 50px;
+}
+.footer .copylight {
+  text-align: center;
+  padding: 1em 0;
+  font-size: 14px;
+}
+
+.topic {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+.topic_title {
+  padding: 30px;
+  background-color: #263A67;
+  color: #fff;
+}
+.topic_text {
+  margin-left: 30px;
+}
+.topic_text_box {
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.topic_text_box a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+.topic_text_box:last-child {
+  margin-bottom: unset;
+}
+.topic_text .postdate {
+  margin-right: 50px;
+}
+
+.introduce {
+  position: relative;
+  padding-bottom: 55px;
+  margin-bottom: 140px;
+}
+.introduce::after {
+  content: "";
+  background-color: #F8F8F8;
+  width: 61%;
+  height: 85%;
+  right: 0;
+  bottom: 0;
+  position: absolute;
+  z-index: -5;
+}
+.introduce_inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+.introduce_image {
+  width: 54vw;
+}
+.introduce_text_area {
+  margin-left: 55px;
+  padding-right: 40px;
+}
+.introduce_title {
+  font-family: YuMincho, "Yu Mincho", serif;
+  font-size: 28px;
+  margin-bottom: 40px;
+}
+.introduce_text {
+  line-height: 2.5;
+  margin-bottom: 50px;
+}
+.introduce .button_inner {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.casestudy {
+  width: 100%;
+  padding-top: 140px;
+  padding-bottom: 80px;
+  position: relative;
+  margin-bottom: 125px;
+}
+.casestudy::after {
+  position: absolute;
+  content: "";
+  width: 67vw;
+  height: 100%;
+  min-width: 960px;
+  top: 0;
+  left: 0;
+  background-color: #14389B;
+  opacity: 0.24;
+  z-index: -5;
+}
+.casestudy_text_area {
+  margin-bottom: 70px;
+}
+.casestudy_text {
+  line-height: 2.5;
+}
+.casestudy_image_box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.casestudy_image {
+  font-size: 24px;
+  color: #fff;
+  font-weight: 500;
+  width: calc(33% - 15px);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  aspect-ratio: 417/371;
+}
+.casestudy_image a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+.casestudy_image:hover {
+  -webkit-transition: 0.3s all;
+  transition: 0.3s all;
+  opacity: 0.8;
+}
+.casestudy .welder {
+  background-image: url(../image/welder.jpg);
+}
+.casestudy .processing {
+  background-image: url(../image/processing.jpg);
+}
+.casestudy .gear {
+  background-image: url(../image/gear.jpg);
+}
+
+.areamap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  width: 100%;
+  height: 100%;
+  padding-top: 200px;
+  padding-bottom: 80px;
+  margin-bottom: 140px;
+  position: relative;
+}
+.areamap::before {
+  content: "";
+  width: 70%;
+  height: 100%;
+  background-image: url(../image/japan.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: left;
+  top: 0;
+  left: 29px;
+  position: absolute;
+}
+.areamap_text_area {
+  width: 57%;
+  background-color: #F8F8F8;
+  padding-left: 13%;
+  padding: 80px 13% 45px 13%;
+}
+.areamap_title {
+  font-family: YuMincho, "Yu Mincho", serif;
+  font-size: 28px;
+  margin-bottom: 100px;
+}
+.areamap_text {
+  line-height: 2.5;
+  margin-bottom: 50px;
+  text-align: justify;
+}
+.areamap .button_inner {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.linkbox {
+  width: 100%;
+  padding: 100px 0 75px;
+  position: relative;
+}
+.linkbox::after {
+  position: absolute;
+  content: "";
+  width: 78vw;
+  height: 100%;
+  min-width: 1118px;
+  top: 0;
+  left: 0;
+  background-color: #14389B;
+  opacity: 0.24;
+  z-index: -5;
+}
+.linkbox_inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.linkbox_card {
+  width: calc(33% - 25px);
+  color: #fff;
+  aspect-ratio: 361/470;
+  padding: 0 4%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.linkbox_card a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+.linkbox_card:hover {
+  -webkit-transition: 0.3s all;
+  transition: 0.3s all;
+  opacity: 0.8;
+}
+.linkbox .product_card {
+  background-image: url(../image/product_card.png);
+  margin-bottom: 130px;
+}
+.linkbox .casestudy_card {
+  background-image: url(../image/casestudy_card.png);
+  margin-top: 65px;
+  margin-bottom: 65px;
+}
+.linkbox .flow_card {
+  background-image: url(../image/flow_card.png);
+  margin-top: 130px;
+}
+.linkbox_title {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.linkbox_text {
+  line-height: 1.75;
+}
+
+.recruit {
+  position: relative;
+  padding-bottom: 70px;
+  margin-top: 140px;
+  margin-bottom: 140px;
+}
+.recruit::before {
+  position: absolute;
+  content: "";
+  background-color: #F8F8F8;
+  width: 90%;
+  height: 67%;
+  top: 100px;
+  left: 0;
+  z-index: -5;
+}
+.recruit_inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-left: 4%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.recruit_text_area {
+  padding-top: 100px;
+  margin-top: 100px;
+  width: 35%;
+}
+.recruit_text_area .section_title {
+  margin-bottom: 50px;
+}
+.recruit_text {
+  line-height: 2.5;
+  margin-bottom: 45px;
+  margin-left: 30px;
+}
+.recruit_image_area {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  width: 50%;
+}
+.recruit .button_inner {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+.recruit_image02 {
+  margin-top: -60px;
+  margin-right: 35%;
+}

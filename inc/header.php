@@ -30,6 +30,8 @@
 
     <!-- Webフォント -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
 
 
     <!-- アイコンフォント -->
@@ -38,6 +40,8 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/destyle.css@2.0.2/destyle.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://use.typekit.net/rtu7svs.css">
 </head>
 
 <body>
@@ -52,24 +56,26 @@
                 <li><a href="/">トップページ</a></li>
                 <li><a href="/product">製品情報</a></li>
                 <li><a href="/introduction">会社情報</a></li>
-                <li><a href="/casestady">施工事例</a></li>
+                <li><a href="/casestudy">施工事例</a></li>
                 <li><a href="/news">お知らせ</a></li>
                 <li><a href="/recruit">採用情報</a></li>
-                <li class="header_contact"><a href="/cotnact">お問合わせ</a></li>
+                <li class="header_contact"><a href="/cotnact">お問い合わせ</a></li>
             </ul>
         </nav>
     </header>
 
     <!-- MV -->
     <div class="mv">
-        <div class="mv_inner">
+        <div class="mv_inner wrapper">
             <h1 class="maincopy">
                 60年の信頼と実績で
                 <br>安心のパートナーになります
             </h1>
             <div class="button">
-                <div class="button_round"></div>
-                <p class="button_text">ふじ芳金属加工について</p>
+                <a href="" class="button_inner">
+                    <div class="button_round"></div>
+                    <p class="button_text">ふじ芳金属加工について</p>
+                </a>
             </div>
 
         </div>

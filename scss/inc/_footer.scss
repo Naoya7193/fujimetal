@@ -1,0 +1,170 @@
+// お問合わせ
+.contact{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #EBEBEB;
+    margin-bottom: 190px;
+
+    &_title{
+        font-family :YuMincho,'Yu Mincho',serif;
+        font-size: 28px;
+        margin-top: 95px;
+        margin-bottom: 55px;
+    }
+
+    &_tel_button{
+        width: 70%;
+        text-align: center;
+        color: #5D5B88;
+        font-family :'din-2014',sans-serif;
+        font-size: 30px;
+        font-weight: 500;
+        padding: 40px 0;
+        border: 1px solid #5D5B88;
+        margin-bottom: 28px;
+
+        .tel_number{
+            display: inline-block;
+            position: relative;
+
+            &::before{
+                position: absolute;
+                content: "";
+                width: 34px;
+                height: 34px;
+                left: -5.5vw;
+                background-image: url(../image/tel.png);
+                background-repeat: no-repeat;
+                background-size: contain;
+                background-position: center;
+            }
+
+            &::after{
+                position: absolute;
+                content: "(平日10:00〜18:00)";
+                font-family: 'Noto Sans JP', sans-serif;
+                transform: translateY(50%);
+                font-size: 16px;
+                font-weight: 400;
+                color: #5D5B88;
+                right: -100%;
+            }
+        }
+    }
+
+    &_button{
+        display: block;
+        width: 70%;
+        text-align: center;
+        font-size: 20px;
+        font-weight: 500;
+        color: #fff;
+        padding: 40px 0;
+        background-color: #5D5B88;
+        margin-bottom: 96px;
+
+        position: relative;
+
+        &::before{
+            position: absolute;
+            content: "";
+            background-image: url(../image/mail.png);
+            width: 30px;
+            height: 30px;
+            left: 50%;
+            transform: translateX(-150px);
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center;
+        }
+
+        &:hover{
+            transition: .3s all;
+            opacity: .8;
+        }
+    }
+}
+
+
+// フッター
+.footer{
+    color: #fff;
+    background-color: #34375A;
+    padding-top: 48px;
+
+    a:hover{
+        transition: .3s all;
+        opacity: .8;
+    }
+
+    &_icon{
+        font-size: 28px;
+        font-weight: 700;
+    }
+
+    &_inner{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 38px;
+    }
+
+    &_info{
+        font-size: 15px;
+
+        .address{
+            margin-bottom: 1em;
+        }
+    }
+
+    &_nav{
+        font-weight: 500;
+        padding-bottom: 70px;
+        font-size: 18px;
+
+        li{
+            margin-bottom: 25px;
+
+            ul{
+                margin-top: 25px;
+
+                li a{
+                    display: flex;
+                    align-items: center;
+                    font-weight: 400;
+                    font-size: 16px;
+                    margin-left: 20px;
+                    position: relative;
+
+                    &::before{
+                        position: absolute;
+                        content: "";
+                        width: 8px;
+                        height: 8px;
+                        border: 1px solid #fff;
+                        border-top: 0;
+                        border-left: 0;
+                        transform: rotate(-45deg);
+                        left: -20px;
+                    }
+                }
+            }
+
+        }
+
+        &_container{
+            display: flex;
+        }
+
+        &_block{
+            margin-left: 50px;
+        }
+
+    }
+
+    .copylight{
+        text-align: center;
+        padding: 1em 0;
+        font-size: 14px;
+    }
+}
