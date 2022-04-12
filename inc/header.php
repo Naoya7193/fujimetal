@@ -66,7 +66,7 @@
 
     <!-- MV -->
     <div class="mv">
-        <div class="mv_inner wrapper">
+        <div class="mv_inner wrapper wrapper_sp">
             <h1 class="maincopy">
                 60年の信頼と実績で
                 <br>安心のパートナーになります

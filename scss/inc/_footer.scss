@@ -6,11 +6,22 @@
     background-color: #EBEBEB;
     margin-bottom: 190px;
 
+    @include mq() {
+        margin-bottom: 50px;
+    }
+
     &_title{
         font-family :YuMincho,'Yu Mincho',serif;
         font-size: 28px;
         margin-top: 95px;
         margin-bottom: 55px;
+
+        @include mq() {
+            letter-spacing: .2em;
+            font-size: 20px;
+            margin-top: 28px;
+            margin-bottom: 23px;
+        }
     }
 
     &_tel_button{
@@ -24,9 +35,20 @@
         border: 1px solid #5D5B88;
         margin-bottom: 28px;
 
+        @include mq() {
+            font-size: 22px;
+            margin-bottom: 12px;
+            padding: 25px 0 45px;
+        }
+
         .tel_number{
             display: inline-block;
             position: relative;
+
+            @include mq() {
+                padding-left: 35px;
+                letter-spacing: .1em;
+            }
 
             &::before{
                 position: absolute;
@@ -38,6 +60,11 @@
                 background-repeat: no-repeat;
                 background-size: contain;
                 background-position: center;
+
+                @include mq() {
+                    left: -7vw;
+                    transform: translateY(5px);
+                }
             }
 
             &::after{
@@ -49,6 +76,13 @@
                 font-weight: 400;
                 color: #5D5B88;
                 right: -100%;
+
+                @include mq() {
+                    right: 8%;
+                    bottom: -12px;
+                    font-size: 14px;
+                    letter-spacing: 0;
+                }
             }
         }
     }
@@ -66,6 +100,14 @@
 
         position: relative;
 
+        @include mq() {
+            font-size: 16px;
+            padding: 35px 0;
+            margin-bottom: 28px;
+            padding-left: 35px;
+            letter-spacing: .1em;
+        }
+
         &::before{
             position: absolute;
             content: "";
@@ -77,6 +119,10 @@
             background-repeat: no-repeat;
             background-size: contain;
             background-position: center;
+
+            @include mq() {
+                transform: translateX(-110px) translateY(-5px);
+            }
         }
 
         &:hover{
@@ -93,6 +139,10 @@
     background-color: #34375A;
     padding-top: 48px;
 
+    @include mq() {
+        padding-top: 20px;
+    }
+
     a:hover{
         transition: .3s all;
         opacity: .8;
@@ -101,19 +151,36 @@
     &_icon{
         font-size: 28px;
         font-weight: 700;
+
+        @include mq() {
+            font-size: 16px;
+        }
     }
 
     &_inner{
         display: flex;
         justify-content: space-between;
         margin-top: 38px;
+
+        @include mq() {
+            margin-top: 13px;
+        }
     }
 
     &_info{
         font-size: 15px;
 
+        @include mq() {
+            font-size: 14px;
+            margin-bottom: 42px;
+        }
+
         .address{
             margin-bottom: 1em;
+
+            @include mq() {
+                margin-bottom: 1.14em;
+            }
         }
     }
 
@@ -121,6 +188,10 @@
         font-weight: 500;
         padding-bottom: 70px;
         font-size: 18px;
+
+        @include mq() {
+            display: none;
+        }
 
         li{
             margin-bottom: 25px;
@@ -164,7 +235,12 @@
 
     .copylight{
         text-align: center;
-        padding: 1em 0;
+        padding: .75em 0;
         font-size: 14px;
+
+        @include mq() {
+            padding-top: 0;
+            font-size: 12px;
+        }
     }
 }

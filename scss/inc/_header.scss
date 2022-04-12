@@ -12,6 +12,13 @@
         font-weight: 700;
         margin-left: 5%;
 
+        @include mq() {
+            font-size: 14px;
+            width: unset;
+            padding: 20px 0;
+            margin-left: 3.5%;
+        }
+
         &:hover{
             transition: .3s all;
             opacity: .8;
@@ -20,6 +27,10 @@
 
     &_nav{
         width: auto;
+
+        @include mq() {
+            display: none;
+        }
     }
 
     &_list{
@@ -61,6 +72,14 @@
     background-size: cover;
     background-position: top left;
 
+    @include mq() {
+        width: unset;
+        aspect-ratio: unset;
+        height: 142vw;
+        background-image: url(../image/mv_sp.jpg);
+        background-position: top left 16%;
+    }
+
     &_inner{
         height: auto;
         color: #fff;
@@ -76,11 +95,22 @@
         line-height: 1.67;
         font-family :YuMincho,'Yu Mincho',serif;
         margin-bottom: 54px;
+
+        @include mq() {
+            font-size: 24px;
+            margin-bottom: 18px;
+            line-height: 1.46;
+        }
     }
 
     .button{
         margin-bottom: 54px;
         width: fit-content;
+
+        @include mq() {
+            margin-bottom: 22px;
+            letter-spacing: .1em;
+        }
 
         &_round{
             border-color: #fff;

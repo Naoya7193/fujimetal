@@ -10,18 +10,56 @@ body {
     font-size: 16px;
     font-weight: 400;
     color: #222;
+
+    @include mq() {
+        font-size: 14px;
+    }
 }
 
 .wrapper{
     width: 90%;
     margin: 0 auto;
     max-width: 1290px;
+
+    @include mq() {
+        width: 93%;
+        margin: 0 auto;
+        min-width: 349px;
+    }
 }
 
 .wrapper_small{
     width: 81%;
     margin: 0 auto;
     max-width: 1170px;
+}
+
+@include mq() {
+    .wrapper_sp_large{
+        width: 93%;
+        margin: 0 auto;
+        min-width: 349px;
+    }
+
+    .wrapper_sp{
+        width: 86%;
+        margin: 0 auto;
+        min-width: 323px;
+    }
+
+    .wrapper_sp_small{
+        width: 79%;
+        margin: 0 auto;
+        min-width: 298px;
+    }
+
+    .flex{
+        flex-direction: column;
+    }
+
+    .pc_none{
+        display: none;
+    }
 }
 
 
@@ -46,6 +84,11 @@ body {
         border: 1px solid #263A67;
         border-radius: 100px;
         position: relative;
+
+        @include mq() {
+            width: 26px;
+            height: 26px;
+        }
 
         &::before{
             position: absolute;
@@ -75,6 +118,10 @@ body {
         font-weight: 600;
         margin-left: 25px;
 
+        @include mq() {
+            margin-left: 12px;
+        }
+
     }
 }
 
@@ -85,6 +132,13 @@ body {
     padding-left: 15px;
     position: relative;
 
+    @include mq() {
+        font-size: 22px;
+        letter-spacing: .2em;
+        padding-left: 12px;
+        margin-bottom: 25px;
+    }
+
     &::before{
         position: absolute;
         content: "";
@@ -93,5 +147,10 @@ body {
         height: 100%;
         top: 0;
         left: 0;
+
+        @include mq() {
+            border-left: 4px solid #34375A;
+            width: 4px;
+        }
     }
 }

@@ -1,15 +1,15 @@
 <!-- お問合わせ -->
-<div class="contact wrapper_small">
+<div class="contact wrapper_small wrapper_sp_large">
     <p class="contact_title">ご依頼・ご相談はこちら</p>
-    <div class="contact_tel_button">
+    <div class="contact_tel_button wrapper_sp">
         <p class="tel_number">06-6664-7777</p>
     </div>
-    <a href="" class="contact_button">メールでお問い合わせ</a>
+    <a href="" class="contact_button wrapper_sp">メールでお問い合わせ</a>
 </div>
 
 <!-- フッター -->
 <footer class="footer">
-    <div class="footer_wrapper wrapper">
+    <div class="footer_wrapper wrapper wrapper_sp">
         <p class="footer_icon"><a href="/">株式会社ふじ芳金属加工</a></p>
         <div class="footer_inner">
             <div class="footer_info">
